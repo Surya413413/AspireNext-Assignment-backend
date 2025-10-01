@@ -1,0 +1,37 @@
+GET http://localhost:3000/colleges
+Content-Type: application/json
+
+
+###
+GET http://localhost:5000/colleges
+
+###
+
+GET http://localhost:5000/colleges?location=Hyderabad
+
+###
+GET http://localhost:5000/colleges?search=ABC
+
+###
+GET http://localhost:5000/colleges?location=Bangalore&sort=asc
+
+
+### 
+POST http://localhost:5000/reviews
+Content-Type: application/json
+
+{
+  "college_id": 1,
+  "college_name": "ABC Engineering College",
+  "rating": 5,
+  "comment": "Excellent college with great faculty!"
+}
+###
+GET http://localhost:3000/reviews  
+###   
+GET http://localhost:3000/favorites
+###    
+POST http://localhost:3000/favorites
+
+###
+DELETE http://localhost:3000/favorites/:id
